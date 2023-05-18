@@ -1,10 +1,10 @@
-# Arrhythmia Detection using CNN and MIT-BIH Database
+# Arrhythmia Detection using CNN with MIT-BIH Database
 
 ## Introduction
 This project focuses on the development of a Convolutional Neural Network (CNN) model for the detection of arrhythmia using the MIT-BIH Arrhythmia Database. The MIT-BIH Arrhythmia Database is a widely used dataset for studying heart rhythm abnormalities. It consists of electrocardiogram (ECG) recordings of patients with various types of arrhythmias.
 
 ## MIT-BIH Arrhythmia Database
-The MIT-BIH Arrhythmia Database contains ECG recordings of 48 patients, with each recording varying in length. The database includes annotations for different classes of heartbeats, including both healthy and unhealthy rhythms. The classes include normal (N), right bundle branch block (RBBB), ventricular ectopic beat (V), left bundle branch block (LBBB), and atrial premature beat (A).
+The MIT-BIH Arrhythmia Database contains ECG recordings of 48 patients, with each recording varying in length. The database includes annotations for different classes of heartbeats, including both healthy and unhealthy rhythms. The classes include normal (N), right bundle branch block (RBBB), ventricular ectopic beat (V), left bundle branch block (LBBB), and atrial premature beat (A). In official site of MIT BIH the data is in format of .dat file, you can use it too, but here is the dataset in csv format. [MIT BIH CSV DATASET](https://www.kaggle.com/datasets/taejoongyoon/mitbit-arrhythmia-database)
 
 ## Data Preprocessing
 The data preprocessing involves segmenting the ECG signals based on the provided R-peak indices. Each heartbeat is converted into a 2D image using the matplotlib library, with the class label associated with it. The images are then resized to 225x150 pixels.

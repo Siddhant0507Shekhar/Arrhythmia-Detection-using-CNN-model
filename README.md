@@ -54,4 +54,12 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 
 ## Conclusion
-This project demonstrates the use of a CNN model for arrhythmia detection using the MIT-BIH Arrhythmia Database. The model shows promising results in classifying different types of heartbeats accurately. We have reached 97.2% accuracy with only 35000 training points and due to our system hindrance we can't increase the traing data more but would belive that with this architecture we can accuracy of above 99%. The trained model can be further evaluated and deployed for real-world applications in the field of cardiac health monitoring.
+This project demonstrates the use of a CNN model for arrhythmia detection using the MIT-BIH Arrhythmia Database. The model shows promising results in classifying different types of heartbeats accurately. We have reached 97.2% accuracy with only 35000 training points and due to our system hindrance we can't increase the traing data more but would belive that with this architecture we can accuracy of above 99%. The trained model can be further evaluated and deployed for real-world applications in the field of cardiac health monitoring. 
+
+# Predicting output from the model
+The main problem which you can face while predicting output from this model is how to convert your linear data into images such that R peak will be in middle of the image. In MIT BIH database we have been provided R peaks in txt file for each patient , but in real world case we can find it using Biosppy module. So in biosppy module , I have used Christov Segmenter like this 
+
+```python
+r_peaks = biosppy.signals.ecg.christov_segmenter(signal=np_arr, sampling_rate=200.0)[0]
+```
+Here np_arr is patient heart ecg data as an array , You can adjust sampling rate according to the device from which it records. Then after finding R peaks, you can segment the whole array into each heartbeat equal to number of heartbeats in that array.

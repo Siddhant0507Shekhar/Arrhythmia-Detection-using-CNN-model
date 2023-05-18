@@ -1,5 +1,4 @@
-# Project Title
-Arrhythmia Detection using CNN and MIT-BIH Database
+# Arrhythmia Detection using CNN and MIT-BIH Database
 
 ## Introduction
 This project focuses on the development of a Convolutional Neural Network (CNN) model for the detection of arrhythmia using the MIT-BIH Arrhythmia Database. The MIT-BIH Arrhythmia Database is a widely used dataset for studying heart rhythm abnormalities. It consists of electrocardiogram (ECG) recordings of patients with various types of arrhythmias.
